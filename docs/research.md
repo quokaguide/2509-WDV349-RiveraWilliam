@@ -36,3 +36,6 @@ Before coding an endpoint, write:
   ],
   "error": null
 }
+
+
+**Update:** finalized Week of 2025-09-29 research notes.
