@@ -1,40 +1,23 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 
-import SpringCard from "./components/SpringCard";
+import SpringCard from "./components/SpringCard.jsx";
+import BottomNav from "./components/BottomNav.jsx";
+import FilterModal from "./components/FilterModal.jsx";
 
-function App() {
-  const [count, setCount] = useState(0);
+export default function App() {
+  const [open, setOpen] = useState(false);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <main style={{ padding: 16, paddingBottom: 56 }}>
+      <h1>Springs Explorer (preview)</h1>
+
+      <div style={{ marginBottom: 12 }}>
+        <button onClick={() => setOpen(true)}>Filter</button>
+        {open && <FilterModal onClose={() => setOpen(false)} />}
       </div>
 
-      <h1>Vite + React</h1>
-
-      <div className="card">
-        <button onClick={() => setCount((c) => c + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-
-      <main style={{ padding: 16 }}>
+      <div style={{ display: "grid", gap: 12 }}>
         <SpringCard
           name="Wekiwa Springs"
           clarity="clear"
@@ -47,20 +30,9 @@ function App() {
           distanceKm={48.0}
           amenities={["camping"]}
         />
-      </main>
-    </>
+      </div>
+
+      <BottomNav />
+    </main>
   );
 }
-
-export default App;
-
-
-import BottomNav from "./components/BottomNav.jsx";
-export default function App(){ return (<div style={{paddingBottom:56}}>Hello<BottomNav/></div>); }
-
-
-import { useState } from "react";
-import FilterModal from "./components/FilterModal.jsx";
-const [open,setOpen] = useState(false);
-<button onClick={()=>setOpen(true)}>Filter</button>
-{open && <FilterModal onClose={()=>setOpen(false)} />}
