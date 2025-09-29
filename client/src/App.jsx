@@ -57,3 +57,10 @@ export default App;
 
 import BottomNav from "./components/BottomNav.jsx";
 export default function App(){ return (<div style={{paddingBottom:56}}>Hello<BottomNav/></div>); }
+
+
+import { useState } from "react";
+import FilterModal from "./components/FilterModal.jsx";
+const [open,setOpen] = useState(false);
+<button onClick={()=>setOpen(true)}>Filter</button>
+{open && <FilterModal onClose={()=>setOpen(false)} />}
