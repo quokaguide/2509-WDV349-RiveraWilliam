@@ -5,7 +5,7 @@
 - Main calls:
   - `GET /api/springs?near=lat,lng&maxDistance=50&clarity=clear`
   - `GET /api/springs/:id`
-  - `POST /api/favorites`  { springId }
+  - `POST /api/favorites` { springId }
   - `DELETE /api/favorites/:springId`
 - Return the same shape every time: `{ data: ..., error: null }` or `{ data: null, error: { code, message } }`
 - If something’s wrong, send a 400 with a clear message.
@@ -36,6 +36,3 @@ Before coding an endpoint, write:
   ],
   "error": null
 }
-
-
-**Update:** finalized Week of 2025-09-29 research notes.
