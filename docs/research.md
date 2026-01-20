@@ -1,3 +1,4 @@
+proposal-scope-update
 ## Week of 2025-09-22 — Research Notes
 
 ### 1) API basics (for Springs Explorer)
@@ -36,3 +37,23 @@ Before coding an endpoint, write:
   ],
   "error": null
 }
+
+# Research – R2
+
+## Audience
+- Primary users:
+- Needs:
+
+## Competitors
+| Competitor | Strengths | Gaps | Notes |
+|---|---|---|---|
+| A |  |  |  |
+| B |  |  |  |
+
+## Insights → MVP Requirements
+- Insight: … → Requirement: …
+- Insight: … → Requirement: …
+
+## References
+- Links…
+ main
