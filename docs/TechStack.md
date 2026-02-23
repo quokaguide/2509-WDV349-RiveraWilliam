@@ -38,3 +38,14 @@ A web app to discover Florida’s natural springs. Users can browse a list/map o
               coordinates: [Number] } // [lng, lat], 2dsphere index
 }
 eof
+
+## References
+
+1. React Documentation. “Getting Started with React.” Meta Open Source, 2024. https://react.dev/. Accessed Jan 27, 2026.
+
+2. Vite Documentation. “Why Vite.” Vite, 2024. https://vitejs.dev/guide/. Accessed Jan 27, 2026.
+
+3. Node.js Documentation. “Node.js Overview.” OpenJS Foundation, 2024. https://nodejs.org/en/docs. Accessed Jan 27, 2026.
+
+4. MongoDB Documentation. “Introduction to MongoDB.” MongoDB, Inc., 2024. https://www.mongodb.com/docs/. Accessed Jan 27, 2026.
+

@@ -1,38 +1,31 @@
-import { useState } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+
+import Home from "./pages/Home";
+import Explore from "./pages/Explore";
+import Saved from "./pages/Saved";
+import SpringsDetails from "./pages/SpringsDetails";
+import NotFound from "./pages/NotFound";
+import BottomNav from "./components/BottomNav";
+
 import "./App.css";
 
-import SpringCard from "./components/SpringCard.jsx";
-import BottomNav from "./components/BottomNav.jsx";
-import FilterModal from "./components/FilterModal.jsx";
-
 export default function App() {
-  const [open, setOpen] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   return (
-    <main style={{ padding: 16, paddingBottom: 56 }}>
-      <h1>Springs Explorer (preview)</h1>
-
-      <div style={{ marginBottom: 12 }}>
-        <button onClick={() => setOpen(true)}>Filter</button>
-        {open && <FilterModal onClose={() => setOpen(false)} />}
-      </div>
-
-      <div style={{ display: "grid", gap: 12 }}>
-        <SpringCard
-          name="Wekiwa Springs"
-          clarity="clear"
-          distanceKm={22.4}
-          amenities={["kayaking", "parking"]}
-        />
-        <SpringCard
-          name="Blue Springs"
-          clarity="crystal"
-          distanceKm={48.0}
-          amenities={["camping"]}
-        />
-      </div>
+    <div className="app">
+      <main className={`app-main ${isHome ? "app-main--full" : ""}`}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/explore" element={<Explore />} />
+          <Route path="/saved" element={<Saved />} />
+          <Route path="/springs/:id" element={<SpringsDetails />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
 
       <BottomNav />
-    </main>
+    </div>
   );
 }

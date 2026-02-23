@@ -1,0 +1,27 @@
+[
+    {
+        "id": "wekiwa",
+        "name": "Wekiwa Springs",
+        "clarity": "clear",
+        "distanceKm": 22.4,
+        "amenities": ["kayaking", "parking"],
+        "image": "/springs/wekiwasprings.jpg"
+      },
+      {
+        "id": "blue",
+        "name": "Blue Springs",
+        "clarity": "crystal",
+        "distanceKm": 48,
+        "amenities": ["camping", "parking", "kayaking", "tubing"],
+        "image": "/springs/bluesprings.jpg"
+      },
+      {
+        "id": "rock",
+        "name": "Rock Springs (Kelly Park)",
+        "clarity": "crystal",
+        "distanceKm": 35,
+        "amenities": ["tubing", "picnic", "parking"],
+        "image": "/springs/rocksprings.jpg"
+      }
+  ]
+  
