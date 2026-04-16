@@ -143,7 +143,7 @@ export default function Explore() {
       <div className="spring-grid">
         {visibleSprings.map((s) => (
           <article key={s.id} className="spring-card">
-            <div className="spring-imageWrap">
+                      <div className="spring-imageWrap">
               <img className="spring-image" src={s.image} alt={s.name} loading="lazy" />
             </div>
 
@@ -153,8 +153,7 @@ export default function Explore() {
               <div className="spring-meta">
                 <span className="pill">{s.clarity}</span>
                 <span className="dot">•</span>
-                <span>{s.distanceKm} km</span>
-                {s.temperature ? (
+                <span>{(s.distanceKm * 0.621371).toFixed(1)} mi</span>                {s.temperature ? (
                   <>
                     <span className="dot">•</span>
                     <span>{s.temperature}</span>
